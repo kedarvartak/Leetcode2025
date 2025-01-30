@@ -1,4 +1,4 @@
-class Solution {
+class Solution 
 public:
     int helperMemo(vector<int>& coins, int amount, vector<int>& dp){
         //base case
@@ -37,4 +37,4 @@ public:
         int ans = helperTab(coins, amount);
         return (ans == INT_MAX) ? -1 : ans;
     }
-};
+;
