@@ -1,3 +1,5 @@
+
+
 # LeetCode Consistency Tracker
 
 Welcome to my LeetCode Consistency Tracker repository. This repository serves as a documentation of my journey to solve LeetCode problems consistently. It highlights my progress, the problems I tackle, and the insights I gain along the way.
@@ -14,6 +16,14 @@ The goal of this repository is to:
 
 ---
 
+## Visual Explanations with Excalidraw
+
+To enhance understanding and make the problem-solving process more engaging, I use Excalidraw to create visual explanations of each LeetCode question. These visual aids help to break down complex problems into simpler, more manageable parts.
+
+You can check out my Excalidraw LeetCode explanations [here](https://excalidraw.com/#json=Nn3g34YutnktntFPPIWVe,85nJUoyO32234VusJ1Uk7w).
+
+---
+
 ## Future Goals
 
 - Achieve a streak of solving problems consistently for 100+ days.
@@ -23,5 +33,6 @@ The goal of this repository is to:
 
 ---
 
-
 Thank you for visiting my repository. Let’s solve some problems!
+
+---
