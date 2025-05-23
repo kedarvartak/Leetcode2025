@@ -45,20 +45,41 @@ Pass 3:
 
 Final Sorted Array: [1, 2, 4, 5, 8]
 
-Time Complexity:
-- Worst Case: O(n^2) - When the array is in reverse order.
-- Average Case: O(n^2) - When elements are in a jumbled order.
-- Best Case: O(n) - When the array is already sorted, and the optimization (no swaps flag) is used.
-  (The outer loop runs once, and the inner loop runs n-1 times).
+Algorithm Properties:
 
-Space Complexity:
-- O(1) - It's an in-place sorting algorithm; it only requires a constant amount of extra space
-  for temporary variables during swaps.
+1. Time Complexity:
+   - Worst Case: O(n^2) - When the array is in reverse order.
+   - Average Case: O(n^2) - When elements are in a jumbled order.
+   - Best Case: O(n) - When the array is already sorted, and the optimization (no swaps flag) is used.
+     (The outer loop runs once, and the inner loop runs n-1 times).
 
-Stability:
-- Bubble Sort is a stable sorting algorithm. This means that elements with equal values
-  maintain their relative order in the sorted output.
-  (e.g., if you have (5,a) and (5,b) where a appears before b, they will remain in that order).
+2. Space Complexity (In-Place):
+   - Definition (In-Place Algorithm): An algorithm is considered in-place if it transforms the input
+     by overwriting it, using only a constant amount of extra storage space (O(1)). This means the
+     additional memory required does not scale with the size of the input data. Auxiliary variables
+     for loop counters, indices, or a temporary variable for swapping are generally permitted.
+   - Bubble Sort: Yes, it is an in-place algorithm. It sorts the array by modifying it directly
+     and only requires a few extra variables (for loop indices, a temporary variable for swapping,
+     and a boolean flag for optimization), which amounts to O(1) auxiliary space.
+
+3. Stability (Stable Sort):
+   - Definition (Stable Sort): A sorting algorithm is stable if it preserves the relative order of
+     records with equal keys (values). If two items have the same key, their relative order in the
+     input data will be the same as their relative order in the output sorted data.
+   - Bubble Sort: Yes, it is a stable sorting algorithm. The standard implementation of Bubble Sort
+     only swaps elements if `arr[j] > arr[j+1]`. If `arr[j] == arr[j+1]`, no swap occurs.
+     Therefore, two equal elements will never have their relative order changed, maintaining stability.
+
+4. Online Algorithm:
+   - Definition (Online Algorithm): An online algorithm can process its input piece-by-piece as it
+     arrives, without having the entire input available from the start. It must make decisions or
+     produce output based on the data seen so far, often without knowledge of future data.
+   - Bubble Sort: No, Bubble Sort is not an online algorithm in its typical implementation. It requires
+     multiple passes over the entire dataset (or the unsorted portion) to correctly place elements.
+     The position of an element is determined relative to others in the current pass, and elements
+     (especially larger ones) "bubble" to their final position over these passes. It cannot process
+     elements sequentially as they arrive and place them in their final sorted position without
+     considering subsequent elements or re-processing previous ones in later passes.
 
 When to Use / Not Use:
 - Use: Mostly for educational purposes due to its simplicity.
@@ -99,11 +120,11 @@ void bubbleSort(std::vector<int>& arr) {
 }
 
 // Helper function to print the vector
-void printVector(const vector<int>& arr) {
+void printVector(const std::vector<int>& arr) {
     for (int x : arr) {
-        cout << x << " ";
+        std::cout << x << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 // int main() {
